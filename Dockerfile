@@ -22,6 +22,7 @@ RUN test -e /var/lib/mysql || mkdir -p /var/lib/mysql
 RUN test -e /run/mysqld || mkdir -p /run/mysqld
 RUN test -e $MOODLE_PATH/data || mkdir -p $MOODLE_PATH/data
 
+#additional dir
 COPY apache2/httpd.conf /etc/apache2/httpd.conf
 COPY php/custom.ini /etc/php7/conf.d/custom.ini
 COPY mysql/my.cnf /etc/mysql/my.cnf
